@@ -70,6 +70,7 @@ class EditViewController: UIViewController {
         let realm_2 = try! Realm()
         try! realm_2.write{
             realm_2.add(memo)
+            realm_2.delete(self.todoTitles[j])
         }
     }
 }
